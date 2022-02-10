@@ -1,5 +1,27 @@
 # Solidity 0.8.11 教學
 
+## 一個簡單的智能合約
+```solidity
+pragma solidity ^0.8.11;
+
+contract Name {
+    string private _param;
+
+    constructor() {
+        _param = 100;
+    }
+
+    modifier mod() {
+        require(true, "錯誤訊息");
+        _;
+    }
+
+    function func() public mod() returns (bool) {
+        return true;
+    }
+}
+```
+
 ## pragma
 - solidity
     - 運行版本
